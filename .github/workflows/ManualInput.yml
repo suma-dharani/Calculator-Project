@@ -1,0 +1,17 @@
+name: Manual Input Workflow dispatch
+on:
+  workflow_dispatch: 
+    inputs:
+      student:
+        description: Student name
+        required: true
+        default: Suma
+jobs:
+  studentInput:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: studentnameinput
+        runs: echo "Hello ${{github.event.inputs.student}}"
+  
+      
