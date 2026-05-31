@@ -1,0 +1,14 @@
+name: Manual workflow demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  say-hello:
+    runs-on:  ubuntu-latest
+
+    steps:
+      - name: print message
+        run: echo "Hello Suma!! workflow dispatch working"
+    
+  
