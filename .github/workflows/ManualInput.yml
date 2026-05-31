@@ -12,6 +12,6 @@ jobs:
 
     steps:
       - name: studentnameinput
-        runs: echo "Hello ${{github.event.inputs.student}}"
+        run: echo "Hello ${{github.event.inputs.student}}"
   
       
