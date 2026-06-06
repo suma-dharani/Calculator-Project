@@ -1,0 +1,24 @@
+name: Sending a trigger to RepositoryDispatchDemo file
+
+on:
+  workflow_dispatch:
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: triggering message
+        run: |
+          curl -X POST \
+          -H "Accept: application/vnd.github+json" \
+          -H "Authorization: Bearer ${{ secrets.MyMagicToken }}" \
+          https://api.github.com/repos/suma-dharani/Calculator-Project/dispatches \
+          -d '{
+            "event_type":"deploy_app",
+            "client_payload":{
+              "app":"Geek-Navi",
+              "env":"production"
+            }
+          }'
+          
