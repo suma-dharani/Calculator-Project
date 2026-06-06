@@ -6,14 +6,13 @@ on:
 jobs:
   demoJob:
     runs-on: ubuntu-latest
-    
-    steps: 
+    steps:
       - name: Print App info
-      run: |
-        Echo "Workflow Triggered!!"
-        Echo "My app info:"
-        Echo " My Event name: ${{github.event.action}} "
-        Echo " App name: ${{github.event.client_payload.app}}"
-        Echo "Enviroment name: ${{github.event.cilent_payload.env}}"
+        run: |
+          Echo "Workflow Triggered!!"
+          Echo "My app info:"
+          Echo " My Event name: ${{github.event.action}} "
+          Echo " App name: ${{github.event.client_payload.app}}"
+          Echo "Enviroment name: ${{github.event.cilent_payload.env}}"
       
     
