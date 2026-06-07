@@ -9,10 +9,10 @@ jobs:
     steps:
       - name: Print App info
         run: |
-          Echo "Workflow Triggered!!"
-          Echo "My app info:"
-          Echo " My Event name: ${{github.event.action}} "
-          Echo " App name: ${{github.event.client_payload.app}}"
-          Echo "Enviroment name: ${{github.event.cilent_payload.env}}"
+          echo "Workflow Triggered!!"
+          echo "My app info:"
+          echo " My Event name: ${{github.event.action}} "
+          echo " App name: ${{github.event.client_payload.app}}"
+          echo "Enviroment name: ${{github.event.client_payload.env}}"
       
     
